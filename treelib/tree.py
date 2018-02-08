@@ -168,7 +168,7 @@ class Tree(object):
         # iter with func
         for pre, node in self.__get(nid, level, filter, key, reverse,
                                     line_type):
-            label = get_label(node)
+            label = get_label(node).decode('utf-8')
             func('{0}{1}'.format(pre, label).encode('utf-8'))
 
     def __get(self, nid, level, filter_, key, reverse, line_type):
